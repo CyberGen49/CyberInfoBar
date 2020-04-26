@@ -6,7 +6,9 @@ echo.
 echo Initializing CyberInfoBar...
 
 cd..
+echo.
 echo Working in directory "%cd%"
+echo.
 
 if not exist "%appdata%\Rainmeter\CyberInfoBar" (
 	echo Looks like %username% hasn't used CyberInfoBar before, how nice!
@@ -18,10 +20,15 @@ if not exist "%appdata%\Rainmeter\CyberInfoBar" (
 ) else (
 	echo Welcome back to CyberInfoBar, %username%!
 	echo.
+	if not exist "%appdata%\Rainmeter\CyberInfoBar\UserOptions.ini" (
+		echo Copying UserOptions.ini because it doesn't exist.
+		xcopy ".\defaults\CyberInfoBar\UserOptions.ini" "%appdata%\Rainmeter\CyberInfoBar\" /E /Y
+	)
 	echo Refreshing default theme files...
 	xcopy ".\defaults\CyberInfoBar\Themes" "%appdata%\Rainmeter\CyberInfoBar\Themes\" /E /Y
 )
 
+echo.
 echo Initialization complete!
 echo Have a nice day!
 
