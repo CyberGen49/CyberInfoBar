@@ -19,7 +19,8 @@ Each option's variable name is in `code text` next to its title.These variables 
 
 Note that all variables are considered overrides, which means if they aren't set, they stay as their defaults. 
 
-## Options
+# General Options
+
 ### Language - `language`
 Defines the language for the skin to use. Unsupported languages will default to English.
 
@@ -36,9 +37,50 @@ Defines the path to variables file containing appearance options. This option ca
 * **Valid:** *Any file path ending in .ini or .inc*
 * **Default:** `%appdata%\Rainmeter\CyberInfoBar\Themes\Default.ini`
 
+
+
+## Battery Indicator Options
+
 ### Battery Indicator - `barBatteryIndicator`
 
- Sets the state of the battery indicator in the bar. The auto setting will only show the battery indicator when a battery is detected.
+Sets the state of the battery indicator in the bar. The auto setting will only show the battery indicator when a battery is detected.
 
 * **Valid:** `true`, `auto`, `false`
 * **Default:** `auto`
+
+### Battery Percentage Mode - `batteryPercentageMode`
+
+Sets the state of the battery percentage text (if the battery indicator is enabled). The auto setting will only show the battery percentage when the battery isn't fully charged.
+
+This setting has no effect if `barBatteryIndicator` is set to false.
+
+* **Valid:** `true`, `auto`, `false`
+* **Default:** `auto`
+
+
+
+## Bar Menu Options
+
+### Menu Names - `barMenuName1` - `barMenuName5`
+
+Sets the name of each of the 5 bar menu buttons. Note that there are 5 variables here, each with their own content. 
+
+* **Valid:** *Any string*
+* **Defaults:**
+  * `barMenuName1` : `System`
+  * `barMenuName2` : `Applications`
+  * `barMenuName3` : `Games`
+  * `barMenuName4` : `Utilities`
+  * `barMenuName5` : `Settings`
+
+### Menu Paths - `barApplicationsPath`,  `barGamesPath`, `barUtilitiesPath`
+
+Sets the source folder path for each of the 3 dynamic menus. 
+
+**Tip:** You can easily grab the path of a folder by **shift right-clicking** on it and choosing **Copy as path**.
+
+* **Valid:** *Any string*
+* **Defaults:**
+  * `barMenuName2` : `Applications`
+  * `barMenuName3` : `Games`
+  * `barMenuName4` : `Utilities`
