@@ -2,3 +2,5 @@
 @Resources/artwork.png
 @Resources/artwork.png
 *.ico
+*.ico
+@Resources/artwork.png
